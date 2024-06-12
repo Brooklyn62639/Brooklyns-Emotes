@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brooklyn Arts</title>
+    <!-- Include Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, pink, #4a002b);
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        /* Style for buttons */
+        .button {
+            background-color: #ff69b4; /* Pink */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #d6469e; /* Lighter pink on hover */
+        }
+
+        /* Style for image slider container */
+        .slider-container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Style for individual images */
+        .slider-img {
+            width: 100%;
+            display: none;
+        }
+
+        /* Style for left and right buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            background-color: rgba(255, 105, 180, 0.2);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            z-index: 1;
+            transition: background-color 0.3s;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(255, 105, 180, 1);
+        }
+
+        /* Style for Brooklyn Arts text */
+        .title {
+            font-size: 120px; /* Increased font size */
+            color: #ff69b4;
+            margin: 20px 0;
+            font-family: 'Amatic SC', cursive; /* Apply the custom font */
+        }
+
+        /* Style for image boxes */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 20px auto;
+            width: 80%;
+        }
+
+        .image-box {
+            background-color: transparent;
+            width: 100%;
+            padding-bottom: 100%; /* Maintain aspect ratio */
+            position: relative;
+        }
+
+        .image-box img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Style for introduction text */
+        .introduction {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            font-size: 24px; /* Larger font size */
+            text-align: center;
+            border-radius: 10px;
+            box-sizing: border-box;
+            border: 2px solid white; /* White border */
+        }
+
+        /* Style for welcome text */
+        .welcome-text {
+            font-size: 36px; /* Larger font size */
+            color: #ffcccb; /* Light pink color */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Title -->
+    <h1 class="title">Brooklyn Arts</h1>
+
+    <!-- Buttons -->
+    <button class="button" onclick="showHome()">Home</button>
+    <button class="button" onclick="showEmotes()">Emotes</button>
+    <button class="button" onclick="showPrices()">Prices</button>
+    <button class="button" onclick="showContact()">Contact</button>
+
+    <!-- Image slider -->
+    <div class="slider-container">
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <img class="slider-img" src="https://d2w9rnfcy7mm78.cloudfront.net/28589032/original_6905856175efa678927021f2abf8efe0.png?1717627022?bc=0" alt="Image 1">
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+        <!-- First image from Are.na -->
+        <img class="slider-img" src="https://d2w9rnfcy7mm78.cloudfront.net/28589032/original_6905856175efa678927021f2abf8efe0.png?1717627022?bc=0" alt="Image 1">
+        <!-- Second image from Are.na -->
+        <img class="slider-img" src="https://d2w9rnfcy7mm78.cloudfront.net/28589031/original_7bd77778cf1ee9006e75adb4ab3fc421.png?1717627020?bc=0" alt="Image 2">
+    </div>
+
+    <!-- Your content goes here -->
+    <h1 class="welcome-text">Welcome to My Website!</h1>
+    <div class="introduction">
+        Hi, I'm Brooklyn Arts. I'm a digital artist who creates a variety of art pieces. Here, I specialize in making emotes for your Discord or Twitch. Feel free to check out my work and contact me if you're interested in my services. If you'd like to see my other pieces or inquire about other services, head over to my socials, my portfolio, or my art commission page, which can be found in the Contact section.
+    </div>
+
+    <!-- Image boxes -->
+    <div class="image-grid">
+        <div class="image-box"><img src="https://d2w9rnfcy7mm78.cloudfront.net/28589023/original_73cadbdd31766b659a0575afb0402ac9.png?1717627019?bc=0" alt="Image 1"></div>
+        <div class="image-box"><img src="https://d2w9rnfcy7mm78.cloudfront.net/28589022/original_82597dbf34c030aba40de1012a07ad18.png?1717627019?bc=0" alt="Image 2"></div>
+        <div class="image-box"><img src="https://d2w9rnfcy7mm78.cloudfront.net/28589021/original_90ccf8fe942a55e473ce67fa44dd0081.png?1717627019?bc=0" alt="Image 3"></div>
+        <div class="image-box"><img src="https://d2w9rnfcy7mm78.cloudfront.net/28589027/original_11092c94f1ca2b9c8f21efb8289c1d83.png?1717627019?bc=0" alt="Image 4"></div>
+        <div class="image-box"><img src="https://d2w9rnfcy7mm78.cloudfront.net/28589025/original_2c82437ea1181da39d01b1eff939645b.png?1717627019?bc=0" alt="Image 5"></div>
+        <div class="image-box"><img src="https://d2w9rnfcy7mm78.cloudfront.net/28716467/original_bf65e44b070f2f4f5b800433540183d7.png?1718186017?bc=0" alt="Image 6"></div>
+    </div>
+
+    <!-- JavaScript to handle slider -->
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+
+        function prevSlide() {
+            showSlide(slideIndex -= 1);
+        }
+
+        function nextSlide() {
+            showSlide(slideIndex += 1);
+        }
+
+        function showSlide(n) {
+            let slides = document.getElementsByClassName("slider-img");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function showHome() {
+            console.log("Home button clicked");
+        }
+
+        function showEmotes() {
+            console.log("Emotes button clicked");
+        }
+
+        function showPrices() {
+            console.log("Prices button clicked");
+        }
+
+        function showContact() {
+            console.log("Contact button clicked");
+        }
+    </script>
+</body>
+</html
